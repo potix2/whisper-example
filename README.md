@@ -1,6 +1,6 @@
-# Whisper Example
+# Whisper音声文字起こしツール
 
-このプロジェクトは、OpenAIのWhisperモデルを使用した音声認識の実装例です。
+OpenAI Whisper APIを使用して音声ファイルをテキストに変換するシンプルなツールです。
 
 ## セットアップ
 
@@ -13,17 +13,25 @@
 
 ### インストール手順
 
-1. 仮想環境のセットアップ
+1. 必要な依存関係をインストール:
 
 ```bash
 uv venv
 source .venv/bin/activate
+uv sync
 ```
 
-2. 依存パッケージのインストール
+2. OpenAI APIキーを設定:
 
 ```bash
-uv sync --all
+export OPENAI_API_KEY="your_openai_api_key"
 ```
 
+## 使用方法
+
+以下のコマンドで音声ファイルをテキストに変換:
+
+```bash
+python transcribe.py <音声ファイルのパス>
+```
 
